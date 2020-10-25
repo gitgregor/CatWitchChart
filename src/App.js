@@ -13,6 +13,7 @@ function App() {
     <>
       <ThemeStyle >
         <GlobalStyle globDarkModeColor={globDarkModeColor} />
+
         <HomePage globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} />
       </ThemeStyle>
     </>
