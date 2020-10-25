@@ -50,10 +50,38 @@ const GlobalDataProvider = ({ children }) => {
     //     }, 10000)
     // })
 
+    const [globDarkModeColor, setglobDarkModeColor] = useState()
+    const [changeColorToggler, setchangeColorToggler] = useState(false)
+
+    const darkMode = {
+        day: 'white',
+        night: 'black'
+    }
+
+    // useEffect(() => {
+    const DarkModeClickHandler = async () => {
+        await setchangeColorToggler(!changeColorToggler)
+        if (changeColorToggler === true) {
+            setglobDarkModeColor(darkMode.day)
+        }
+        else if (changeColorToggler === false) {
+            setglobDarkModeColor(darkMode.night)
+        }
+    }
+    // })
+
 
 
     return (
-        <GlobalDataContext.Provider >
+        <GlobalDataContext.Provider
+            value={
+                {
+                    globDarkModeColor: globDarkModeColor,
+                    changeColorToggler: changeColorToggler,
+                    DarkModeClickHandler: DarkModeClickHandler,
+                }
+            }
+        >
             {children}
         </GlobalDataContext.Provider>
     )

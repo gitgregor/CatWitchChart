@@ -7,7 +7,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 body{
-    background-color: ${props => (props.state ? props.state : 'white')}
+    background-color: ${props => (props.globDarkModeColor ? props.globDarkModeColor : 'white')}
 }`
 
 export default GlobalStyle
