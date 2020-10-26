@@ -1,3 +1,8 @@
+/* html * {
+    margin: 0;
+    padding: 0;
+} */
+
 .wrapper {
     display: flex;
     flex-flow: row wrap;
@@ -11,9 +16,49 @@
 }
 
 .header {
-    background: tomato;
+    background: cadetblue;
 }
 
+/* .header-wrapper {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    background: cadetblue;
+}
+
+.header-wrapper>div {
+    background: #EDE7F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+} */
+
+/* ============================ */
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dm-button {
+    display: flex;
+    width: 100px;
+    height: 20px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* ============================= */
+
+.App-logo {
+    max-width: 100px;
+    max-height: 60px;
+}
+
+/* ============================= */
 .footer {
     background: lightgreen;
 }
@@ -31,13 +76,18 @@
     background: hotpink;
 }
 
+/* powyżej 600 px */
 @media all and (min-width: 600px) {
     .aside {
         flex: 1 0 0;
     }
 }
 
+/* powyżej 800 px */
 @media all and (min-width: 800px) {
+
+    /* main będzie miał szerokość 3 elementów, na 5 elem. 
+    (3 main, 1 asiede-1,  aside-2 ) */
     .main {
         flex: 3 0px;
     }
@@ -59,6 +109,6 @@
     }
 }
 
-body {
-    padding: 2em;
-}
+/* body {
+    padding: 1em;
+} */
