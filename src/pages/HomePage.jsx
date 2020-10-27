@@ -5,33 +5,21 @@ import User from './UserPage'
 import Admin from './AdminPage'
 import Logo from '../Assets/Logo.svg';
 
-import './styles/mainFlexContainer.css'
+// import './styles/mainFlexContainer.css'
 
 const HomePage = ({ changeColorToggler, DarkModeClickHandler }) => {
     return (
         <div>
-
             <div class="wrapper">
                 <Header className="header" >
-                    <div className="header-wrapper">
-
-                        <div className="logo">
-                            <div>
-                                <img src={Logo} className="App-logo" alt="logo" />
-                            </div>
-                            <div>
-                                <h2>Home page</h2>
-                            </div>
-                        </div>
-
-                        <div className="dm-button">
-                            <button
-                                onClick={DarkModeClickHandler}
-                            >
-                                {changeColorToggler === false ? 'Dark Mode' : 'Day Mode'}
-                            </button>
-                        </div>
-
+                    <img src={Logo} className="App-logo" alt="logo" />
+                    <div className="button-wrapper" />
+                    <div className="mode-button">
+                        <button className="button"
+                            onClick={DarkModeClickHandler}
+                        >
+                            {changeColorToggler === false ? 'Night' : 'Day'}
+                        </button>
                     </div>
                 </Header>
 
@@ -47,7 +35,6 @@ const HomePage = ({ changeColorToggler, DarkModeClickHandler }) => {
                         <Admin />
                     </article>
                 </Route>
-
 
                 <aside class="aside aside-1">
                     <ul>

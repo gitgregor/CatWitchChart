@@ -4,17 +4,32 @@ import GlobalStyle from './STYLES/GlobalStyles/globalStyle'
 import ThemeStyle from './STYLES/Theme/ThemeProvider'
 import HomePage from './pages/HomePage'
 
+// import GridTest from './TEST/GridTests/grid-test'
+// import GridTest1 from './TEST/GridTests/grid-test1'
+// import GridTest2 from './TEST/GridTests/grid-test2'
+import GridTest3 from './TEST/GridTests/grid-test3'
+
 
 function App() {
 
   const { globDarkModeColor, changeColorToggler, DarkModeClickHandler } = useContext(GlobalDataContext)
 
+
+  console.log(changeColorToggler)
+  console.log(globDarkModeColor)
   return (
     <>
       <ThemeStyle >
-        <GlobalStyle globDarkModeColor={globDarkModeColor} />
 
-        <HomePage globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} />
+        {/* <GridTest /> */}
+        {/* <GridTest1 /> */}
+        {/* <GridTest2 /> */}
+        <GridTest3 />
+
+        {/* <GlobalStyle globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} />
+
+        <HomePage globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} /> */}
+
       </ThemeStyle>
     </>
   );
