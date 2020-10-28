@@ -56,7 +56,7 @@
     grid-row: 2 / 4;
     grid-template-columns: subgrid;
     grid-template-rows: repeat(1, 100px);
-    background-color: lightblue;
+    background-color: rgb(114, 164, 156);
     min-height: 70vh;
 
 
@@ -75,8 +75,16 @@
     grid-row: 2 / 4;
     grid-template-columns: subgrid;
     grid-template-rows: repeat(1, 100px);
-    background-color: pink;
+    background-color: rgb(114, 130, 132);
     min-height: 70vh;
+
+    .main-content {
+        grid-column: 1 / 6;
+        grid-row: 2 / 4;
+        justify-self: center;
+        align-self: center;
+        color: black;
+    }
 
 
 }
@@ -88,7 +96,8 @@
     grid-row: 2 / 4;
     grid-template-columns: subgrid;
     grid-template-rows: repeat(1, 100px);
-    background-color: lightblue;
+    background-color: rgb(114, 164, 156);
+    ;
     min-height: 70vh;
 
     .aside-2-content {
@@ -105,7 +114,7 @@
     grid-row: 4 / 5;
     grid-template-columns: subgrid;
     grid-template-rows: repeat(1, 100px);
-    background-color: yellow;
+    background-color: rgb(97, 132, 135);
     min-height: 20vh;
 
 
@@ -118,9 +127,14 @@
     }
 }
 
+.user-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
 
-// .wrapper-main {
-//     display: flex;
-//     flex-flow: row wrap;
-//     justify-content: center;
-// }
+.user-content>div {
+    background: #EDE7F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}

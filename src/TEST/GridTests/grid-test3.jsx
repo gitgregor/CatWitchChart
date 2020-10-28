@@ -1,5 +1,10 @@
 
 import React from 'react'
+import { Route, Link, Switch, Redirect } from 'react-router-dom'
+import User from '../../pages/UserPage'
+import Admin from '../../pages/AdminPage'
+
+
 import Logo from '../../Assets/Logo.svg'
 import '../../STYLES/Styles/scssStyles/grid-test3.scss'
 
@@ -17,16 +22,43 @@ const GridTest = () => {
                     </div>
                 </div>
 
-
                 <div className="aside-1">
                     <div className="aside-1-content">
-                        aside-1
-                </div>
+                        <ul>
+                            <li>
+                                <Link to="/user">User</Link>
+                            </li>
+                            <li>
+                                <Link to="/admin">Admin</Link>
+                            </li>
+                        </ul>
+
+                        <Switch>
+                            <Route exact path="/user" >
+                                <Redirect to="/mainlayoutUser" />
+                            </Route>
+                            <Route exact path="/admin" >
+                                <Redirect to="/mainlayoutAdmin" />
+                            </Route>
+                        </Switch>
+                    </div>
                 </div>
 
                 <div className="main">
                     <div className="main-content">
-                        <main></main>
+                        <Route path="/mainlayoutUser"  >
+                            <article>
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                <User />
+                            </article>
+                        </Route>
+
+                        <Route path="/mainlayoutAdmin"  >
+                            <article>
+                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                                <Admin />
+                            </article>
+                        </Route>
                     </div>
                 </div>
 
