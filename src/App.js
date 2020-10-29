@@ -21,13 +21,15 @@ function App() {
     <>
       <ThemeStyle >
 
+        <GlobalStyle globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} />
+
         {/* <GridTest /> */}
         {/* <GridTest1 /> */}
         {/* <GridTest2 /> */}
-        <GridTest3 />
 
-        {/* <GlobalStyle globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} />
+        <GridTest3 globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} />
 
+        {/* 
         <HomePage globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} /> */}
 
       </ThemeStyle>

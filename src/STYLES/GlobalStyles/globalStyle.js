@@ -27,9 +27,13 @@ body{
 
 .header{
     background-color: ${props => (props.changeColorToggler ? 'gray' : 'cadetblue')};
-    opacity: ${props => (props.changeColorToggler ? '0.4' : '1')};
-
+    /* opacity: ${props => (props.changeColorToggler ? '0.4' : '1')}; */
 }
+
+/* .x{
+    background-color: ${props => (props.changeColorToggler ? 'gray' : 'cadetblue')};
+    opacity: ${props => (props.changeColorToggler ? '0.4' : '1')};
+} */
 
 .aside-1, .aside-2{
     /* background-color: ${props => (props.changeColorToggler ? '#141322' : 'green')} */
@@ -37,9 +41,13 @@ body{
     background-color: ${props => (props.changeColorToggler ? '#141322' : '#1f8d8f')}
 }
 
+.main{
+    background-color: ${props => (props.changeColorToggler ? "#222" : "rgb(114, 130, 132)")}
+}
+
 .footer{
     background-color: ${props => (props.changeColorToggler ? 'gray' : '#035456')};
-    opacity: ${props => (props.changeColorToggler ? '0.4' : '1')};
+    /* opacity: ${props => (props.changeColorToggler ? '0.4' : '1')}; */
 }
 
 `

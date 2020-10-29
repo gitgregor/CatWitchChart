@@ -8,7 +8,7 @@ import Admin from '../../pages/AdminPage'
 import Logo from '../../Assets/Logo.svg'
 import '../../STYLES/Styles/scssStyles/grid-test3.scss'
 
-const GridTest = () => {
+const GridTest = ({ changeColorToggler, DarkModeClickHandler }) => {
     return (
         <div className="wrapper-main" >
             <div className="grid">
@@ -18,7 +18,11 @@ const GridTest = () => {
                         <p style={{ textAlign: "center" }}>Logo desc</p>
                     </div>
                     <div className="dm-button">
-                        <button>button</button>
+                        <button
+                            onClick={DarkModeClickHandler}
+                        >
+                            {changeColorToggler === false ? 'Night' : 'Day'}
+                        </button>
                     </div>
                 </div>
 
