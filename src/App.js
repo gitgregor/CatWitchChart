@@ -2,13 +2,10 @@ import React, { useContext } from 'react';
 import GlobalDataContext from './Contexts/contextsDeclarations'
 import GlobalStyle from './STYLES/GlobalStyles/globalStyle'
 import ThemeStyle from './STYLES/Theme/ThemeProvider'
-import HomePage from './pages/HomePage'
+// import HomePage from './pages/HomePage'
+import Grid4 from './TEST/GridTests/grid-4'
 
-// import GridTest from './TEST/GridTests/grid-test'
-// import GridTest1 from './TEST/GridTests/grid-test1'
-// import GridTest2 from './TEST/GridTests/grid-test2'
-import GridTest3 from './TEST/GridTests/grid-test3'
-
+import Accordion from './Components/Accordion/Accordion'
 
 function App() {
 
@@ -20,18 +17,12 @@ function App() {
   return (
     <>
       <ThemeStyle >
-
         <GlobalStyle globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} />
 
-        {/* <GridTest /> */}
-        {/* <GridTest1 /> */}
-        {/* <GridTest2 /> */}
 
-        <GridTest3 globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} />
+        <Grid4 globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} />
 
-        {/* 
-        <HomePage globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} /> */}
-
+        {/* <HomePage globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} /> */}
       </ThemeStyle>
     </>
   );

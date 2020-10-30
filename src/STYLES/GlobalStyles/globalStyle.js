@@ -1,11 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 
-// const theme = {
-//     backgrounColor: `${state}`
-// }
-
-
-
 const GlobalStyle = createGlobalStyle`
 html, body, #root {
     margin: 0;
@@ -30,14 +24,7 @@ body{
     /* opacity: ${props => (props.changeColorToggler ? '0.4' : '1')}; */
 }
 
-/* .x{
-    background-color: ${props => (props.changeColorToggler ? 'gray' : 'cadetblue')};
-    opacity: ${props => (props.changeColorToggler ? '0.4' : '1')};
-} */
-
 .aside-1, .aside-2{
-    /* background-color: ${props => (props.changeColorToggler ? '#141322' : 'green')} */
-    /* background-color: ${props => (props.changeColorToggler ? '#141322' : '#035456')} */
     background-color: ${props => (props.changeColorToggler ? '#141322' : '#1f8d8f')}
 }
 
@@ -55,6 +42,3 @@ body{
 
 export default GlobalStyle
 
-// lightslategray - gray color
-//Wrought Iron
-//Steal Wool
