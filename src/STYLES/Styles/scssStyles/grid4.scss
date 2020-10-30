@@ -15,10 +15,10 @@
         .one {
             grid-column: 1 / 1;
             grid-row: 1 / 2;
-            border: 5px solid red;
             max-height: 100px;
             margin-top: 30px;
             // align-self: center;
+            // border: 5px solid red;
 
             .img-logo {
                 max-width: 100px;
@@ -28,19 +28,19 @@
         .two {
             grid-column: 3 / 10;
             grid-row: 1 / 5;
-            border: 5px solid blue;
             color: black;
+            // border: 5px solid blue;
 
         }
 
         .three {
             grid-column: 12 / 13;
             grid-row: 1 / 2;
-            border: 5px solid gray;
             max-height: 100px;
             width: 40px;
             margin-top: 30px;
             // align-self: center;
+            // border: 5px solid gray;
 
             .sun-icon {
                 max-width: 40px;
@@ -56,29 +56,29 @@
         .four {
             grid-column: 1 / 3;
             grid-row: 2 / 5;
-            border: 5px solid green;
+            // border: 5px solid green;
         }
 
         .item {
             // .five {
             display: grid;
             grid-column: 10 / 13;
-            grid-row: 2 / 5;
-            grid-template-columns: subgrid;
-            grid-template-rows: subgrid;
-            border: 5px solid yellow;
+            // grid-row: 2 / 5;    // without grid-row the left sidebar
+            // dont change its width after expande more then one accordion level
 
-            .subitem {
-                // width: 200px;
-                width: 80%;
-                // max-width: 120px;
-                // max-height: 100px;
-                margin: 20px;
-                grid-column: 1 / 4;
-                grid-row: 1 / 4;
-                // align-self: center;
-                // justify-self: center;
-            }
+            // grid-template-columns: subgrid;
+            // grid-template-rows: subgrid;
+
+            // border: 5px solid yellow;
+
+            // .subitem {
+            //     width: 80%;
+            //     margin: 20px;
+            //     grid-column: 1 / 4;
+            //     grid-row: 1 / 4;
+            //     // align-self: center;
+            //     // justify-self: center;
+            // }
 
         }
 
@@ -90,7 +90,7 @@
             height: 100px;
             grid-column: 1 / 13;
             grid-row: 5 / 6;
-            border: 5px solid rgb(23, 214, 189);
+            // border: 5px solid rgb(23, 214, 189);
         }
     }
 
