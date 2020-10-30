@@ -97,3 +97,14 @@
 
 
 }
+
+
+.link-user,
+.link-admin {
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+}

@@ -8,6 +8,7 @@ import { Route, Link, Switch, Redirect } from 'react-router-dom'
 import User from '../../pages/UserPage'
 import Admin from '../../pages/AdminPage'
 import Accordion from '../../Components/Accordion/Accordion'
+import MenuVertical from '../../Components/Menu/MenuVertical'
 
 import '../../STYLES/Styles/scssStyles/grid4.scss'
 
@@ -59,10 +60,10 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler }) => {
                     <div className="aside-1-content">
                         <ul>
                             <li>
-                                <Link to="/user">User</Link>
+                                <Link to="/user" className="link-user">User</Link>
                             </li>
                             <li>
-                                <Link to="/admin">Admin</Link>
+                                <Link to="/admin" className="link-admin">Admin</Link>
                             </li>
                             {/* <li>
                                 <Link to="/accordion">Accordion</Link>
@@ -81,6 +82,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler }) => {
                             </Route> */}
                         </Switch>
                     </div>
+                    <MenuVertical />
                 </div>
 
 

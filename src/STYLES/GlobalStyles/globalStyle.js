@@ -37,7 +37,7 @@ body{
     /* opacity: ${props => (props.changeColorToggler ? '0.4' : '1')}; */
 }
 
-.h2__user, .admin_title, .paragraph {
+.h2__user, .admin_title, .paragraph, nav.mainex a, .link-user,  .link-admin {
      color:  ${props => (props.changeColorToggler ? 'white'
         :
         !props.changeColorToggler ? "black"
