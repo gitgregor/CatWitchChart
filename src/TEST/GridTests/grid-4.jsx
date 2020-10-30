@@ -24,15 +24,19 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler }) => {
                 <div className="two">
                     <Route path="/user"  >
                         <article>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                            <p className="paragraph">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
                             <User className="main-content" />
+
                         </article>
                     </Route>
 
                     <Route path="/admin"  >
                         <article>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                            <p className="paragraph">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+
                             <Admin />
+
                         </article>
                     </Route>
                 </div>
@@ -80,8 +84,8 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler }) => {
                 </div>
 
 
+                {/* <div className="five"> */}
                 <div className="item">
-                    {/* <div className="five"> */}
                     <div className="subitem">
                         <Accordion />
                     </div>

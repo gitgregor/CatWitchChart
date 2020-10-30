@@ -37,6 +37,14 @@ body{
     /* opacity: ${props => (props.changeColorToggler ? '0.4' : '1')}; */
 }
 
+.h2__user, .admin_title, .paragraph {
+     color:  ${props => (props.changeColorToggler ? 'white'
+        :
+        !props.changeColorToggler ? "black"
+            :
+            props.globDarkModeColor)};
+        }
+
 `
 
 

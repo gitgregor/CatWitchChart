@@ -4,8 +4,8 @@ import '../STYLES/Styles/scssStyles/grid-test3.scss'
 const Home = () => {
     return (
         <div>
-            <h2>User page</h2>
-            <div className="user-content">
+            <h2 className="h2__user" >User page</h2>
+            <div className="user-content" >
 
                 <div>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse aliquid laboriosam minima ex praesentium recusandae reprehenderit unde sit tempore atque aut commodi
