@@ -15,9 +15,31 @@ const Experimental = () => {
             <p>
                 {ctnx}
 
+                {/* .row>.col* */}
+                {/* and enter */}
+
+                {/* doing as below */}
+
+                {/* <div className="row">
+    <div className="col"></div>
+</div> */}
+
             </p>
         </Provider>
     )
 }
 
 export default Experimental
+
+
+// class  extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {  }
+//     }
+//     render() { 
+//         return (  );
+//     }
+// }
+
+// export default ;

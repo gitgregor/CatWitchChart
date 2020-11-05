@@ -7,14 +7,16 @@ import SunIcon from '../../Assets/sun-icon-yellow.svg'
 import { Route, Link, Switch, Redirect } from 'react-router-dom'
 import User from '../../pages/UserPage'
 import Admin from '../../pages/AdminPage'
-import Accordion from '../../Components/Accordion/Accordion'
+import Accordion_copy_v1 from '../../Components/Accordion/Accordion_copy_v1'
 import MenuVertical from '../../Components/Menu/MenuVertical'
+import Loader from '../../Components/Loader/Loder'
+
 
 import '../../STYLES/Styles/scssStyles/grid4.scss'
 
-const Grid4 = ({ changeColorToggler, DarkModeClickHandler }) => {
+const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, SliderClickHandler, sliderWidth }) => {
 
-    console.log(changeColorToggler)
+    // console.log(changeColorToggler)
     return (
         <div className="container">
             <div className="wrapperex">
@@ -24,19 +26,29 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler }) => {
 
                 <div className="two">
                     <Route path="/user"  >
-                        <article>
-                            <p className="paragraph">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
+                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                            <br />
+                            <br />
+                            <br />
+                            <p className="paragraph"><h1>This is main user page</h1></p>
+                            <br />
+                            <hr />
+                            <br />
                             <User className="main-content" />
-
                         </article>
                     </Route>
 
-                    <Route path="/admin"  >
-                        <article>
-                            <p className="paragraph">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
+                    <Route path="/maingrid"  >
+                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                            <br />
+                            <br />
+                            <br />
+                            <p className="paragraph">  <h1>This is main grid for all api data</h1> </p>
+                            <br />
+                            <hr />
+                            <br />
                             <Admin />
+                            {/* <Form /> */}
 
                         </article>
                     </Route>
@@ -63,37 +75,29 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler }) => {
                                 <Link to="/user" className="link-user">User</Link>
                             </li>
                             <li>
-                                <Link to="/admin" className="link-admin">Admin</Link>
+                                <Link to="/maingrid" className="link-admin">Main Grid</Link>
                             </li>
-                            {/* <li>
-                                <Link to="/accordion">Accordion</Link>
-                            </li> */}
                         </ul>
 
                         <Switch>
                             <Route exact path="/user" >
                                 <Redirect to="/user" />
                             </Route>
-                            <Route exact path="/admin" >
-                                <Redirect to="/admin" />
+                            <Route exact path="/maingrid" >
+                                <Redirect to="/maingrid" />
                             </Route>
-                            {/* <Route exact path="/accordion" >
-                                <Redirect to="/accordion" />
-                            </Route> */}
                         </Switch>
                     </div>
                     <MenuVertical />
                 </div>
 
-
                 {/* <div className="five"> */}
                 <div className="item">
-                    <div className="subitem">
-                        <Accordion />
-                    </div>
+                    {/* <div className="subitem"> */}
+                    <Accordion_copy_v1 />
+                    {/* </div> */}
+                    <Loader />
                 </div>
-
-
 
                 <div className="six">Six</div>
             </div>

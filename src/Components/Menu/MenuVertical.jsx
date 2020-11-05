@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 import "./menuVertical.scss";
 
 const list = [
-  { name: "all", path: "/all", exact: true },
-  { name: "options", path: "/options" },
-  { name: "events", path: "/events" },
-  { name: "flow", path: "/flow" },
-  { name: "schema", path: "/schema" },
+  { name: "People", path: "/People", exact: true },
+  { name: "Equipment", path: "/Equipment" },
+  { name: "Dashboard", path: "/Dashboard" },
+  { name: "Register", path: "/Register" },
+  { name: "Events", path: "/Events" },
 ];
 
 const Navigation = () => {

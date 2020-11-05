@@ -1,0 +1,23 @@
+.login-wrapper__formik {
+    h1 {
+        text-align: center;
+        ;
+    }
+
+    .form {
+        display: flex;
+        flex-flow: column wrap;
+        background-color: #fff;
+        border: 5px solid black;
+        margin: 20px;
+    }
+
+    .form>* {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .login-submit__formik {
+        margin-top: 40px;
+    }
+}

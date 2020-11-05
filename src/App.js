@@ -5,17 +5,18 @@ import ThemeStyle from './STYLES/Theme/ThemeProvider'
 // import HomePage from './pages/HomePage'
 import Grid4 from './TEST/GridTests/grid-4'
 
-import Accordion from './Components/Accordion/Accordion'
 
 function App() {
 
-  const { globDarkModeColor, changeColorToggler, DarkModeClickHandler } = useContext(GlobalDataContext)
+  const { globDarkModeColor, changeColorToggler, DarkModeClickHandler, HideSlideClick, SliderClickHandler, sliderWidth } = useContext(GlobalDataContext)
 
 
-  console.log(changeColorToggler)
-  console.log(globDarkModeColor)
+  // console.log(changeColorToggler)
+  // console.log(globDarkModeColor)
   return (
     <>
+
+
       <ThemeStyle >
         <GlobalStyle globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} />
 
