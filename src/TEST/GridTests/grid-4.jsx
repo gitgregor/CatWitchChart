@@ -16,6 +16,8 @@ import '../../STYLES/Styles/scssStyles/grid4.scss'
 
 const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, SliderClickHandler, sliderWidth }) => {
 
+    const testString = "Gherkin with Cypress tests for React"
+
     // console.log(changeColorToggler)
     return (
         <div className="container">
@@ -25,6 +27,51 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                 </div>
 
                 <div className="two">
+
+                    <br />
+                    <hr />
+                    <br />
+                    /**
+                    * input for test reason only
+                    */
+
+                    <br />
+                    <hr />
+                    <br />
+                    <input className="input__test" type="text" />
+
+                    <br />
+                    <hr />
+                    <br />
+
+                        /**
+                        * button for test reason only
+                        */
+                    <br />
+                    <hr />
+                    <br />
+
+                    <button className="button__test" >Test button</button>
+
+                    <br />
+                    <hr />
+                    <br />
+                    /**
+                    * div contxt box for test reason only
+                    */
+                     <br />
+                    <hr />
+                    <br />
+
+                    <div className="content-box"
+                        style={{ border: "2px solid green" }}
+                    >
+                        {testString}
+                    </div>
+
+
+
+
                     <Route path="/user"  >
                         <article style={{ width: "50vw", margin: "0 auto" }}>
                             <br />
