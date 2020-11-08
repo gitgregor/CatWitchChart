@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import GlobalDataContext from '../contextsDeclarations'
 
@@ -12,6 +12,8 @@ const GlobalDataProvider = ({ children }) => {
 
     const [HideSlideClick, setHideSlideClick] = useState(false)
     const [sliderWidth, setSliderWidth] = useState("25vw")
+
+    const [datex, setData] = useState()
 
     const darkMode = {
         day: 'white',
@@ -39,7 +41,49 @@ const GlobalDataProvider = ({ children }) => {
     }
 
 
+    const Loder = () => {
 
+
+        useEffect(
+            () => {
+
+                return new Promise(resolve => {
+                    setTimeout(function () {
+                        resolve(
+
+                            fetch('http://localhost:3005/api/getData')
+                                .then((data) => data.json())
+                                .then((res) => {
+                                    const dt = res.data
+                                    const { _id } = dt[0]
+                                    console.log(dt[0])
+                                    console.log(_id)
+                                    setData(_id)
+                                })
+                        )
+                        console.log("promise FOR FETCH is done")
+                    }, 100)
+                })
+
+
+
+
+
+            }, [fetch])
+
+        // console.log(datex)
+        // return (
+        //     <div>
+        //         <br />
+        //     Loading data :
+        //         <br />
+        //         {datex ? datex : "Loading ..."}
+        //     </div>
+        // )
+
+    }
+
+    Loder()
 
     return (
         <GlobalDataContext.Provider
@@ -51,11 +95,12 @@ const GlobalDataProvider = ({ children }) => {
                     sliderWidth,
                     HideSlideClick,
                     SliderClickHandler,
+                    datex
                 }
             }
         >
             { children}
-        </GlobalDataContext.Provider >
+        </GlobalDataContext.Provider>
     )
 }
 

@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import GlobalDataContext from '../../Contexts/contextsDeclarations'
+
 // import SunIcon from '../../Assets/sun.svg'
 import MoonIcon from '../../Assets/moon.svg'
 import Logo from '../../Assets/Logo.svg'
@@ -19,6 +21,8 @@ import '../../STYLES/Styles/scssStyles/grid4.scss'
 
 
 const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, SliderClickHandler, sliderWidth }) => {
+
+    const { datex } = useContext(GlobalDataContext)
 
     const testString = "Gherkin with Cypress tests for React"
 
@@ -118,7 +122,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                             <br />
                             {/* <Admin /> */}
                             {/* <Form /> */}
-                            <DataGrid />
+                            <DataGrid datex={datex} />
 
                         </article>
                     </Route>
@@ -200,7 +204,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                     {/* <div className="subitem"> */}
                     <Accordion_copy_v1 />
                     {/* </div> */}
-                    <Loader />
+                    {/* <Loader /> */}
                 </div>
 
                 <div className="six">Six</div>

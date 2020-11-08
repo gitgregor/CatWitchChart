@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Route, Link, Switch, Redirect } from 'react-router-dom'
 
 import DrawerW3C from '../Drawer/DrawerW3C'
-import DataGrid from '../Tables/DataGrid/DataGrid'
+// import DataGrid from '../Tables/DataGrid/DataGrid'
 
 
 import "./acoordion.styles.scss";
@@ -40,7 +40,7 @@ const Accordion = () => {
   const [state, setstate] = useState("0vw")
   const [trg, setTrg] = useState()
 
-  async function openNav(e) {
+  function openNav(e) {
     return new Promise(resolve => {
       setTimeout(function () {
         resolve(
