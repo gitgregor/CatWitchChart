@@ -2,8 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Route, Link, Switch, Redirect } from 'react-router-dom'
 
 import DrawerW3C from '../Drawer/DrawerW3C'
+import DataGrid from '../Tables/DataGrid/DataGrid'
+
+
 import "./acoordion.styles.scss";
-import '../../STYLES/Styles/scssStyles/grid4.scss'
+// import '../../STYLES/Styles/scssStyles/grid4.scss'
 
 const paragraph =
   "PARAGRAPH";
@@ -12,18 +15,22 @@ const data = [
   {
     title: "Add Person",
     paragraph: "p1",
+    link: "addpersonp1"
   },
   {
     title: "Update Person",
     paragraph: "p2",
+    link: "maingrid"
   },
   {
     title: "Remove Person",
     paragraph: "p3",
+    link: "removep3"
   },
   {
     title: "Options",
-    paragraph: "p4",
+    paragraph: "Get Person",
+    link: "accgrid"
   },
 ];
 
@@ -51,14 +58,14 @@ const Accordion = () => {
 
   console.log(trg)
   return (
-    <div className="over-wrapper" >
+    <div>
       <div className="wrapper">
         <ul className="accordion-list" >
 
-          {data.map((data, key) => {
+          {data.map((dat, key) => {
             return (
               <li {...{ className: "accordion-list__item", key }}>
-                <AccordionItem {...data} openNav={openNav} />
+                <AccordionItem {...dat} openNav={openNav} closeNav={closeNav} state={state} trg={trg} />
               </li>
             );
           })}
@@ -66,30 +73,60 @@ const Accordion = () => {
       </div>
 
       { state === "Ovw" ? null : trg === "p1" ?
+        < DrawerW3C openNav={openNav} closeNav={closeNav} state={state} /> : null
+      }
+
+      {/* { state === "Ovw" ? null : trg === "p1" ?
         < DrawerW3C openNav={openNav} closeNav={closeNav} state={state} />
         : trg === "p2" ?
           "p2 p2 p2"
           : trg === "p3" ?
             "P3 P3 P3"
-            : trg === "p4" ?
-              "p4 p4 p4"
+            : trg === "Get Person" ?
+
+
+
+              <div>
+                <ul>
+                  <li>
+                    <Link to="/user" className="link-user">User</Link>
+                  </li>
+                  <li>
+                    <Link to="/accgrid" className="link-admin">Main Grid</Link>
+                  </li>
+                </ul>
+
+                <Switch>
+                  <Route exact path="/user" >
+                    <Redirect to="/user" />
+                  </Route>
+                  <Route exact path="/accgrid" >
+                    <Redirect to="/accgrid" />
+                  </Route>
+                </Switch>
+              </div>
+
+
+
+
               : null
-      }
+      } */}
 
     </div>
   );
 }
 
 
-const AccordionItem = (props) => {
+const AccordionItem = ({ openNav, closeNav, title, link, paragraph, state, trg }) => {
   const [opened, setOpened] = useState(false)
 
+  console.log(state)
   return (
     <div onClick={() => setOpened(!opened)} className={`accordion-item, ${opened && "accordion-item--opened"}`}
     >
 
       <div className="accordion-item__line" >
-        <h3 className="accordion-item__title">{props.title}</h3>
+        <h3 className="accordion-item__title">{title}</h3>
         <span className="accordion-item__icon" />
       </div>
 
@@ -97,14 +134,59 @@ const AccordionItem = (props) => {
         <div className="accordion-item__content">
 
           <div className="accordion-item__paragraph">
-            {props.paragraph}
+            {/* {props.paragraph} */}
 
-            <button
-              name={props.paragraph}
+            {state === "Ovw" ? null : trg === "p1" ?
+              < DrawerW3C openNav={openNav} closeNav={closeNav} state={state} /> : null}
+
+            <Link to={link}
+              name={paragraph}
               style={{ fontSize: "30px", cursor: "pointer" }}
-              onClick={props.openNav}>&#9776;
-              {props.paragraph}
-            </button>
+              onClick={openNav}>
+
+              {/* &#9776; */}
+
+              {paragraph}
+
+
+              {/* { state === "Ovw" ? null : trg === "p1" ?
+        < DrawerW3C openNav={openNav} closeNav={closeNav} state={state} />
+        : trg === "p2" ?
+          "p2 p2 p2"
+          : trg === "p3" ?
+            "P3 P3 P3"
+            : trg === "Get Person" ?
+
+
+
+              <div>
+                <ul>
+                  <li>
+                    <Link to="/user" className="link-user">User</Link>
+                  </li>
+                  <li>
+                    <Link to="/accgrid" className="link-admin">Main Grid</Link>
+                  </li>
+                </ul>
+
+                <Switch>
+                  <Route exact path="/user" >
+                    <Redirect to="/user" />
+                  </Route>
+                  <Route exact path="/accgrid" >
+                    <Redirect to="/accgrid" />
+                  </Route>
+                </Switch>
+              </div> 
+
+
+
+
+              : null
+      } */}
+
+
+            </Link>
 
           </div>
 

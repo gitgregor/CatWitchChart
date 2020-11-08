@@ -7,12 +7,16 @@ import SunIcon from '../../Assets/sun-icon-yellow.svg'
 import { Route, Link, Switch, Redirect } from 'react-router-dom'
 import User from '../../pages/UserPage'
 import Admin from '../../pages/AdminPage'
+import DataGrid from '../../Components/Tables/DataGrid/DataGrid'
 import Accordion_copy_v1 from '../../Components/Accordion/Accordion_copy_v1'
 import MenuVertical from '../../Components/Menu/MenuVertical'
 import Loader from '../../Components/Loader/Loder'
+import DrawerW3C from '../../Components/Drawer/DrawerW3C'
 
 
 import '../../STYLES/Styles/scssStyles/grid4.scss'
+// import '../../STYLES/Styles/cssStyles/flex4.css'
+
 
 const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, SliderClickHandler, sliderWidth }) => {
 
@@ -28,48 +32,48 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
 
                 <div className="two">
 
-                    <br />
-                    <hr />
-                    <br />
+                    <div className="test__cy-gherkin">
+                        <br />
+                        <hr />
+                        <br />
                     /**
-                    * input for test reason only
+                    * input for the test reasons only
                     */
 
                     <br />
-                    <hr />
-                    <br />
-                    <input className="input__test" type="text" />
+                        <hr />
+                        <br />
+                        <input className="input__test" type="text" />
 
-                    <br />
-                    <hr />
-                    <br />
+                        <br />
+                        <hr />
+                        <br />
 
                         /**
-                        * button for test reason only
+                        * button for the test reasons only
                         */
                     <br />
-                    <hr />
-                    <br />
+                        <hr />
+                        <br />
 
-                    <button className="button__test" >Test button</button>
+                        <button className="button__test" >Test button</button>
 
-                    <br />
-                    <hr />
-                    <br />
+                        <br />
+                        <hr />
+                        <br />
                     /**
-                    * div contxt box for test reason only
+                    * div content box for the test reasons only
                     */
                      <br />
-                    <hr />
-                    <br />
+                        <hr />
+                        <br />
 
-                    <div className="content-box"
-                        style={{ border: "2px solid green" }}
-                    >
-                        {testString}
+                        <div className="content-box"
+                            style={{ border: "2px solid green" }}
+                        >
+                            {testString}
+                        </div>
                     </div>
-
-
 
 
                     <Route path="/user"  >
@@ -94,18 +98,71 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                             <br />
                             <hr />
                             <br />
-                            <Admin />
+                            {/* <Admin /> */}
                             {/* <Form /> */}
+
 
                         </article>
                     </Route>
+
+
+
+                    <Route path="/accgrid"  >
+                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                            <br />
+                            <br />
+                            <br />
+                            <p className="paragraph">  <h1>This is accordion grid </h1> </p>
+                            <br />
+                            <hr />
+                            <br />
+                            {/* <Admin /> */}
+                            {/* <Form /> */}
+                            <DataGrid />
+
+                        </article>
+                    </Route>
+
+
+                    <Route path="/removep3"  >
+                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                            <br />
+                            <br />
+                            <br />
+                            <p className="paragraph">  <h1>Remove section for P3</h1> </p>
+                            <br />
+                            <hr />
+                            <br />
+                            {/* <Admin /> */}
+                            {/* <Form /> */}
+                            {/* <DataGrid /> */}
+
+                        </article>
+                    </Route>
+
+                    <Route path="/addpersonp1"  >
+                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                            <br />
+                            <br />
+                            <br />
+                            <p className="paragraph">  <h1>Add Person p1</h1> </p>
+                            <br />
+                            <hr />
+                            <br />
+
+                            <DrawerW3C />
+
+                        </article>
+                    </Route>
+
+
                 </div>
 
                 <div className="three">
                     {
                         changeColorToggler
                             ?
-                            <div>
+                            <div className="sun-shrink">
                                 <img className="sun-icon" src={SunIcon} alt="Sun" onClick={DarkModeClickHandler} />
                             </div>
                             :
@@ -116,25 +173,25 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                 </div>
 
                 <div className="four">
-                    <div className="aside-1-content">
-                        <ul>
-                            <li>
-                                <Link to="/user" className="link-user">User</Link>
-                            </li>
-                            <li>
-                                <Link to="/maingrid" className="link-admin">Main Grid</Link>
-                            </li>
-                        </ul>
+                    {/* <div className="aside-1-content"> */}
+                    <ul>
+                        <li>
+                            <Link to="/user" className="link-user">User</Link>
+                        </li>
+                        <li>
+                            <Link to="/maingrid" className="link-admin">Main Grid</Link>
+                        </li>
+                    </ul>
 
-                        <Switch>
-                            <Route exact path="/user" >
-                                <Redirect to="/user" />
-                            </Route>
-                            <Route exact path="/maingrid" >
-                                <Redirect to="/maingrid" />
-                            </Route>
-                        </Switch>
-                    </div>
+                    <Switch>
+                        <Route exact path="/user" >
+                            <Redirect to="/user" />
+                        </Route>
+                        <Route exact path="/maingrid" >
+                            <Redirect to="/maingrid" />
+                        </Route>
+                    </Switch>
+                    {/* </div> */}
                     <MenuVertical />
                 </div>
 

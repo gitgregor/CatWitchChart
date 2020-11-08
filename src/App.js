@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
+import { Route, Link, Switch, Redirect } from 'react-router-dom'
+
 import GlobalDataContext from './Contexts/contextsDeclarations'
 import GlobalStyle from './STYLES/GlobalStyles/globalStyle'
 import ThemeStyle from './STYLES/Theme/ThemeProvider'
 // import HomePage from './pages/HomePage'
 import Grid4 from './TEST/GridTests/grid-4'
+import DrawerW3C from './Components/Drawer/DrawerW3C'
 
 
 function App() {
@@ -25,6 +28,23 @@ function App() {
 
         {/* <HomePage globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} /> */}
       </ThemeStyle>
+
+
+      {/* <Route path="/addpersonp1"  >
+        <article style={{ width: "50vw", margin: "0 auto" }}>
+          <br />
+          <br />
+          <br />
+          <p className="paragraph">  <h1>Add Person p1</h1> </p>
+          <br />
+          <hr />
+          <br />
+
+          <DrawerW3C />
+
+        </article>
+      </Route> */}
+
     </>
   );
 }

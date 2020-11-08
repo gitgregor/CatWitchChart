@@ -17,3 +17,6 @@ And('I click on the submit button', () => {
 Then('I should be redirected to a search page with the results of the {string} search', (term) => {
     cy.get('.content-box ').should('contain.text', term);
 });
+
+
+

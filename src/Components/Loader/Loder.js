@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Loder = () => {
     const [datex, setData] = useState()
 
-    const getDataFromDb = () => {
-        setInterval(() => {
+    useEffect(
+        async () => {
+
             fetch('http://localhost:3005/api/getData')
                 .then((data) => data.json())
                 .then((res) => {
@@ -15,21 +16,38 @@ const Loder = () => {
                     setData(_id)
                 })
 
-        }, 10000)
 
-    }
-
-    getDataFromDb()
+        }, [fetch])
 
     console.log(datex)
     return (
         <div>
-            Loader ...
             <br />
-            {datex}
+            Loading data :
+            <br />
+            {datex ? datex : "Loading ..."}
         </div>
     )
 
 }
 
 export default Loder
+
+
+// const Loder = () => {
+//     const [datex, setData] = useState()
+
+    // const getDataFromDb = () => {
+    //     setInterval(() => {
+    //         fetch('http://localhost:3005/api/getData')
+    //             .then((data) => data.json())
+    //             .then((res) => {
+    //                 const dt = res.data
+    //                 const { _id } = dt[0]
+    //                 console.log(dt[0])
+    //                 console.log(_id)
+    //                 setData(_id)
+    //             })
+
+    //     }, 10000)
+    // }

@@ -22,8 +22,7 @@ const router = express.Router();
 
 // MongoDB database route on Crypto cluster
 
-const dbRoute = ""
-
+const dbRoute = "mongodb+srv://CPC:VybFOH357NcvEWSY@crypto-project-cluster.sump0.mongodb.net/crypto?retryWrites=true&w=majority"
 
 // connect backend code with mongoDB by mongoose library
 mongoose.connect(dbRoute, { useNewUrlParser: true });

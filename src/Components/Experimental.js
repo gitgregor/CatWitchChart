@@ -1,45 +1,40 @@
-import React, { useState, useEffect, useContext } from 'react'
-import Provider from '../Contexts/Providers/GlobalDataProvider'
-import GlobalDataContext from '../Contexts/contextsDeclarations'
+import React from "react"
+// import PropTypes from "prop-types"
 
-
-
-const Experimental = () => {
-
-    const ctnx = useContext(GlobalDataContext)
-
-    console.log(ctnx)
+/**
+ * Component for showing details of the user.
+ *
+ * @component
+ * @example
+ * const age = 21
+ * const name = 'Jitendra Nirnejak'
+ * return (
+ *   <User age={age} name={name} />
+ * )
+ */
+const User = props => {
+    const { name, age } = props
     return (
-        <Provider>
-            kogo
-            <p>
-                {ctnx}
-
-                {/* .row>.col* */}
-                {/* and enter */}
-
-                {/* doing as below */}
-
-                {/* <div className="row">
-    <div className="col"></div>
-</div> */}
-
-            </p>
-        </Provider>
+        <p>
+            {name} is {age} years old.
+        </p>
     )
 }
 
-export default Experimental
-
-
-// class  extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {  }
-//     }
-//     render() { 
-//         return (  );
-//     }
+// User.propTypes = {
+//     /**
+//      * User's name
+//      */
+//     name: PropTypes.string.isRequired,
+//     /**
+//      * User's age
+//      */
+//     age: PropTypes.number,
 // }
 
-// export default ;
+// User.defaultProps = {
+//     text: "Jitendra Nirnejak",
+//     age: 21,
+// }
+
+export default User

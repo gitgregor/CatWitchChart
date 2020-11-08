@@ -31,6 +31,12 @@
             color: black;
             // border: 5px solid blue;
 
+            .test__cy-gherkin {
+                margin: 0 auto;
+                margin-top: 50px;
+                max-width: 70%;
+            }
+
         }
 
         .three {
@@ -59,6 +65,13 @@
             // border: 5px solid green;
         }
 
+
+        // .table {
+        //     // display: grid;
+        //     grid-column: 3 / 10;
+        //     grid-row: 1 / 5;
+        // }
+
         .item {
             // .five {
             display: grid;
@@ -80,6 +93,7 @@
             //     // justify-self: center;
             // }
 
+
         }
 
         .six {
@@ -92,6 +106,9 @@
             grid-row: 5 / 6;
             // border: 5px solid rgb(23, 214, 189);
         }
+
+
+
     }
 
 
