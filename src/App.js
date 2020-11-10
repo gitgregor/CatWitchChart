@@ -1,96 +1,63 @@
-import React, { useState } from 'react';
-import { Route, Link, Switch } from 'react-router-dom'
+import React, { useContext } from 'react';
+import { Route, Link, Switch, Redirect } from 'react-router-dom'
+
+import GlobalDataContext from './Contexts/contextsDeclarations'
 import GlobalStyle from './STYLES/GlobalStyles/globalStyle'
 import ThemeStyle from './STYLES/Theme/ThemeProvider'
-// import styled from 'styled-components'
-import Home from './pages/HomePage'
-import User from './pages/UserPage'
-import Admin from './pages/AdminPage'
-import { Container, Heading } from './STYLES/Styles/styledComponents/AppStyleComponent'
-// import RandomNumberApi from './Apis/RandomNumberApi'
-// import Experimental from './Components/Experimental'
-
-// const Container = styled.div`
-// margin:0 auto;
-// width: 80%;
-// border: ${props => `1px solid ${props.theme.colors.onyx}`};
-// background-color: ${props => props.theme.colors.lightBlue};
-// font-family: ${props => props.theme.fonts[2]};
-// `
-
-// const Heading = styled.h2`
-// font-size: ${({ isHeading, theme: { fontSizes } }) =>
-//     (isHeading ? fontSizes.large : fontSizes.small)
-//   };
-// color: ${({ theme: { colors } }) => (
-//     colors.persianGreen
-//   )}  
-// `
-
-
+// import HomePage from './pages/HomePage'
+import Grid4 from './TEST/GridTests/grid-4'
+import DrawerW3C from './Components/Drawer/DrawerW3C'
 
 
 function App() {
-  const darkMode = {
-    day: 'white',
-    night: 'black'
-  }
 
-  const [state, setState] = useState()
-  const [changeColor, setChangeColor] = useState(false)
-
-  const DarkModeClickHandler = () => {
-    setChangeColor(!changeColor)
-    if (changeColor === true) {
-      setState(darkMode.day)
-    }
-    else if (changeColor === false) {
-      setState(darkMode.night)
-    }
-  }
+  const { globDarkModeColor, changeColorToggler, DarkModeClickHandler, HideSlideClick, SliderClickHandler, sliderWidth } = useContext(GlobalDataContext)
 
 
-
-
+  // console.log(changeColorToggler)
+  // console.log(globDarkModeColor)
   return (
     <>
-      <ThemeStyle>
-        <Container  >
-          <Heading isHeading={true} >Helo World</Heading>
-          <h2>By the power of styled-components!</h2>
-        </Container>
 
 
-        <GlobalStyle state={state} />
-        <button onClick={DarkModeClickHandler}>{changeColor === false ? 'Day Mode' : 'Dark Mode'}</button>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/user">User</Link>
-          </li>
-          <li>
-            <Link to="/admin">Admin</Link>
-          </li>
-        </ul>
+      <ThemeStyle >
+        <GlobalStyle globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} />
 
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/user">
-          <User />
-        </Route>
-        <Route path="/admin">
-          <Admin />
-        </Route>
+
+        <Grid4 globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} />
+
+        {/* <HomePage globDarkModeColor={globDarkModeColor} changeColorToggler={changeColorToggler} DarkModeClickHandler={DarkModeClickHandler} /> */}
       </ThemeStyle>
+
+
+      {/* <Route path="/addpersonp1"  >
+        <article style={{ width: "50vw", margin: "0 auto" }}>
+          <br />
+          <br />
+          <br />
+          <p className="paragraph">  <h1>Add Person p1</h1> </p>
+          <br />
+          <hr />
+          <br />
+
+          <DrawerW3C />
+
+        </article>
+      </Route> */}
 
     </>
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
 
 
 

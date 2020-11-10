@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 const theme = {
@@ -18,10 +18,75 @@ const theme = {
     }
 }
 
+
+
+const darkMode = {
+    day: 'white',
+    night: 'black'
+}
+
+
 const Theme = ({ children }) => (
     <ThemeProvider theme={theme} >
         {children}
     </ThemeProvider>
 )
 
+
+
 export default Theme
+
+
+
+
+
+// const theme = {
+//     global: {
+
+//     },
+//     dayMode: {
+//         colors: {
+//             backgroundLight: "",
+//             backgroundNormal: "",
+//             backgroundStrong: "",
+//             backgroundKhaki: "",
+//             fontColors: {
+//                 black: '',
+//                 white: '',
+//                 light: '',
+//                 normal: '',
+//                 strong: '',
+//             }
+//         },
+//         fontsFamily: [, , ,],
+//         fontSizes: {
+//             small: "",
+//             medium: "",
+//             large: "",
+//         }
+//     },
+//     darkMode: {
+//         colors: {
+//             backgroundLight: "",
+//             backgroundNormal: "",
+//             backgroundStrong: "",
+//             backgroundKhaki: "",
+//             fontColors: {
+//                 black: '',
+//                 white: '',
+//                 light: '',
+//                 normal: '',
+//                 strong: '',
+//                 grayWhite: '',
+//                 grayNormal: '',
+//                 grayStrong: '',
+//             }
+//         },
+//         fontsFamily: [, , ,],
+//         fontSizes: {
+//             small: "",
+//             medium: "",
+//             large: "",
+//         }
+//     }
+// }

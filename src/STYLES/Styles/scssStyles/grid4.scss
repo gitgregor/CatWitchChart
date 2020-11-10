@@ -1,0 +1,127 @@
+.container {
+    // margin: 10px;
+    // margin: 0 auto;
+    // width: 80vw;
+
+    .wrapperex {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+        // height: 100vh;  //ok without height 100vh - cause that settings are bloked 
+        // top ege of subgrid and noi alowed to expand higher
+
+
+        .one {
+            grid-column: 1 / 1;
+            grid-row: 1 / 2;
+            max-height: 100px;
+            margin-top: 30px;
+            // align-self: center;
+            // border: 5px solid red;
+
+            .img-logo {
+                max-width: 100px;
+            }
+        }
+
+        .two {
+            grid-column: 3 / 10;
+            grid-row: 1 / 5;
+            color: black;
+            // border: 5px solid blue;
+
+            .test__cy-gherkin {
+                margin: 0 auto;
+                margin-top: 50px;
+                max-width: 70%;
+            }
+
+        }
+
+        .three {
+            grid-column: 12 / 13;
+            grid-row: 1 / 2;
+            max-height: 100px;
+            width: 40px;
+            margin-top: 30px;
+            // align-self: center;
+            // border: 5px solid gray;
+
+            .sun-icon {
+                max-width: 40px;
+            }
+
+            .moon-icon {
+                max-width: 40px;
+            }
+
+
+        }
+
+        .four {
+            grid-column: 1 / 3;
+            grid-row: 2 / 5;
+            // border: 5px solid green;
+        }
+
+
+        // .table {
+        //     // display: grid;
+        //     grid-column: 3 / 10;
+        //     grid-row: 1 / 5;
+        // }
+
+        .item {
+            // .five {
+            display: grid;
+            grid-column: 10 / 13;
+            // grid-row: 2 / 5;    // without grid-row the left sidebar
+            // dont change its width after expande more then one accordion level
+
+            // grid-template-columns: subgrid;
+            // grid-template-rows: subgrid;
+
+            // border: 5px solid yellow;
+
+            // .subitem {
+            //     width: 80%;
+            //     margin: 20px;
+            //     grid-column: 1 / 4;
+            //     grid-row: 1 / 4;
+            //     // align-self: center;
+            //     // justify-self: center;
+            // }
+
+
+        }
+
+        .six {
+            position: relative;
+            top: 5vh;
+            left: 0;
+            width: 100vw;
+            height: 100px;
+            grid-column: 1 / 13;
+            grid-row: 5 / 6;
+            // border: 5px solid rgb(23, 214, 189);
+        }
+
+
+
+    }
+
+
+
+}
+
+
+.link-user,
+.link-admin {
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+}

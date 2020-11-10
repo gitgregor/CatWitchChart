@@ -1,0 +1,7 @@
+/* .color {
+    color: red;
+} */
+
+p~p {
+    color: red;
+}

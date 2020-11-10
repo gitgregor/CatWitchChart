@@ -11,18 +11,19 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-
-    const now = Date.now();
-    const unitSales = createRandomData(now, 1e8);
     this.state = {
       unitSales,
       campaigns: [
         {
           from: unitSales[3][0],
           to: unitSales[7][0],
-        }
-    };
+        }]
+    }
+    const now = Date.now();
+    const unitSales = createRandomData(now, 1e8);
   }
+
+
 
   renderPlotBand = ({ from, to, title }) => {
     const id = `band-${from}-${to}`;
