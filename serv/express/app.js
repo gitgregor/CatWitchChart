@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const Data = require('../models/data');
 const SignUpData = require('../models/signUpSchema')
+const TableData = require('../models/tableData')
 const path = require('path')
 const fs = require('fs');
 
@@ -24,6 +25,12 @@ const router = express.Router();
 
 const dbRoute = ""
 
+// "mongodb+srv://CPC:VybFOH357NcvEWSY@crypto-project-cluster.sump0.mongodb.net/crypto?retryWrites=true&w=majority"
+
+
+// == oryginal dadabase for crypto to DroTom
+// const dbRoute = "mongodb+srv://CPC:VybFOH357NcvEWSY@crypto-project-cluster.sump0.mongodb.net/crypto?retryWrites=true&w=majority"
+
 // connect backend code with mongoDB by mongoose library
 mongoose.connect(dbRoute, { useNewUrlParser: true });
 let db = mongoose.connection;
@@ -38,12 +45,21 @@ app.use(bodyParser.json());
 app.use(logger('dev'));
 
 // express get method fetches all available data into database
-router.get('/getData', (req, res) => {
-    Data.find((err, data) => {
+// router.get('/getData', (req, res) => {
+//     Data.find((err, data) => {
+//         if (err) return res.json({ success: false, error: err });
+//         return res.json({ success: true, data: data });
+//     });
+// });
+
+
+router.get('/getTableData', (req, res) => {
+    TableData.find((err, data) => {
         if (err) return res.json({ success: false, error: err });
         return res.json({ success: true, data: data });
     });
 });
+
 
 // find user in DB
 router.get('/getSignIN', (req, res) => {
@@ -191,18 +207,18 @@ router.delete('/deleteData', (req, res) => {
 // create method which
 // adds new data into database
 router.post('/putData', (req, res) => {
-    let data = new Data();
+    let data = new TableData();
 
-    const { id, message } = req.body;
+    // const { id, message } = req.body;
 
-    if ((!id && id !== 0) || !message) {
-        return res.json({
-            success: false,
-            error: 'INVALID INPUTS',
-        });
-    }
-    data.message = message;
-    data.id = id;
+    // if ((!id && id !== 0) || !message) {
+    //     return res.json({
+    //         success: false,
+    //         error: 'INVALID INPUTS',
+    //     });
+    // }
+    // data.message = message;
+    // data.uid = uid;
     data.save((err) => {
         if (err) return res.json({ success: false, error: err });
         return res.json({ success: true });

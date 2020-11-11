@@ -125,3 +125,40 @@
     font-weight: bold;
     padding: 10px;
 }
+
+.test__cy-gherkin {
+    font-size: 18px;
+}
+
+.input__test {
+    border: 4px solid rgb(63, 158, 50);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+.button__test {
+    margin-bottom: 20px;
+    line-height: 22px;
+    padding: 0 10px;
+    border-radius: 8px;
+    outline: none;
+    text-decoration: none;
+}
+
+.button__test:hover {
+    background-color: cadetblue;
+    outline: none;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.content-box {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: gray;
+    opacity: 0.9;
+    border: 3px solid green;
+}

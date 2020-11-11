@@ -11,9 +11,10 @@ const tableDataSchema = new Schema(
         lastName: String,
         email: String,
         message: String,
+
     },
     { timestamps: true }
 );
 
 // export the new Schema so we could modify it using Node.js
-module.exports = mongoose.model("tableData", tableDataSchema);
+module.exports = mongoose.model("tabledata", tableDataSchema);

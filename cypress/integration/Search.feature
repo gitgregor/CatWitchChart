@@ -1,6 +1,6 @@
-Feature: Search functionality
-  Scenario: Using the search input
-    Given I am on the homepage
-    When I fill the search input with the "Gherkin with Cypress tests for React" term
-    And I click on the submit button
-    Then I should be redirected to a search page with the results of the "Gherkin with Cypress tests for React" search
+Feature: Funkcjonalność formularza
+Scenario: Użycie pola tekstowego i przycisku do wysłania danych
+Given Jestem na stronie testu: endpoint /test1
+When Kiedy wpisuję frazę "Gherkin i Cypress w React" w polu tekstowym
+And i klikam na przycisk Test button
+Then  wtedy poniżej przycisku jest wypisywany tekst: "Gherkin i Cypress w React"

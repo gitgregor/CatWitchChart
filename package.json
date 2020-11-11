@@ -42,7 +42,8 @@
     "cypress": "cypress open",
     "serve": "json-server db.json",
     "dev": "npm run serve",
-    "docs": "jsdoc -c jsdoc.conf.json"
+    "docs": "jsdoc -c jsdoc.conf.json",
+    "backend": "\"cd serv/express  && node server.js\""
   },
   "eslintConfig": {
     "extends": "react-app"

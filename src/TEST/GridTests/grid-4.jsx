@@ -24,7 +24,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
 
     const { datex } = useContext(GlobalDataContext)
 
-    const testString = "Gherkin with Cypress tests for React"
+    const testString = "Gherkin i Cypress w React"
 
     // console.log(changeColorToggler)
     return (
@@ -147,42 +147,28 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
 
                             <div className="test__cy-gherkin">
                                 <br />
-                                <hr />
                                 <br />
-                    /**
-                    * input for the test reasons only
-                    */
-
-                    <br />
+                                    Pole tekstowe
+                                <br />
                                 <hr />
                                 <br />
                                 <input className="input__test" type="text" />
-
                                 <br />
-                                <hr />
                                 <br />
-
-                        /**
-                        * button for the test reasons only
-                        */
-                    <br />
+                                    Przycisk zatwierdzania formularza
+                                <br />
                                 <hr />
                                 <br />
 
                                 <button className="button__test" >Test button</button>
-
-                                <br />
                                 <hr />
                                 <br />
-                    /**
-                    * div content box for the test reasons only
-                    */
-                     <br />
+                                    Poniżej jest wypisywana fraza z pola tekstowego
+                                <br />
                                 <hr />
                                 <br />
 
                                 <div className="content-box"
-                                    style={{ border: "2px solid green" }}
                                 >
                                     {testString}
                                 </div>

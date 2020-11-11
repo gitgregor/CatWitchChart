@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import GlobalDataContext from '../contextsDeclarations'
 
@@ -41,9 +42,20 @@ const GlobalDataProvider = ({ children }) => {
     }
 
 
+    const putDataToDB = () => {
+        axios.post('http://localhost:3005/api/putData', {
+            uid: 1,
+            firstName: "Ggregor",
+            lastName: "Gherkin",
+            email: "Gregor@Gherkin",
+            message: "Hello Cucamber"
+        });
+    };
+
+    putDataToDB()
+
+
     const Loder = () => {
-
-
         useEffect(
             () => {
 
@@ -51,7 +63,7 @@ const GlobalDataProvider = ({ children }) => {
                     setTimeout(function () {
                         resolve(
 
-                            fetch('http://localhost:3005/api/getData')
+                            fetch('http://localhost:3005/api/getTableData')
                                 .then((data) => data.json())
                                 .then((res) => {
                                     const dt = res.data
@@ -59,9 +71,11 @@ const GlobalDataProvider = ({ children }) => {
                                     console.log(dt[0])
                                     console.log(_id)
                                     setData(_id)
+                                    // setData(dt)
                                 })
                         )
                         console.log("promise FOR FETCH is done")
+                        console.log(datex)
                     }, 100)
                 })
 
