@@ -1,7 +1,7 @@
 import { And, Given, When } from 'cypress-cucumber-preprocessor/steps';
 
 Given('I am on the homepage', () => {
-    cy.visit('http://localhost:3000/');
+    cy.visit('http://localhost:3000/test1');
 });
 
 When('I fill the search input with the {string} term', (term) => {

@@ -20,7 +20,7 @@ const data = [
   {
     title: "Update Person",
     paragraph: "p2",
-    link: "maingrid"
+    link: "updateperson"
   },
   {
     title: "Remove Person",

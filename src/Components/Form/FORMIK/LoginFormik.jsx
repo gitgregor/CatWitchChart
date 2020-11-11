@@ -4,7 +4,7 @@ import '../../../STYLES/Styles/scssStyles/Formik-SCSS/loginForm.styles.scss'
 
 const LoginFormik = () => (
     <div  {...{ className: "login-wrapper__formik" }} >
-        <h1>Sign Up</h1>
+        <h2 style={{ textAlign: "center" }}>To add Person FILL UP this FORM please</h2>
         <Formik
             initialValues={{
                 firstName: '',
@@ -32,7 +32,7 @@ const LoginFormik = () => (
                 />
                 <button
                     {...{ className: "login-submit__formik" }}
-                    type="submit">Submit</button>
+                    type="submit">Add Person</button>
             </Form>
         </Formik>
     </div>

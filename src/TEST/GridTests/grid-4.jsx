@@ -36,48 +36,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
 
                 <div className="two">
 
-                    <div className="test__cy-gherkin">
-                        <br />
-                        <hr />
-                        <br />
-                    /**
-                    * input for the test reasons only
-                    */
 
-                    <br />
-                        <hr />
-                        <br />
-                        <input className="input__test" type="text" />
-
-                        <br />
-                        <hr />
-                        <br />
-
-                        /**
-                        * button for the test reasons only
-                        */
-                    <br />
-                        <hr />
-                        <br />
-
-                        <button className="button__test" >Test button</button>
-
-                        <br />
-                        <hr />
-                        <br />
-                    /**
-                    * div content box for the test reasons only
-                    */
-                     <br />
-                        <hr />
-                        <br />
-
-                        <div className="content-box"
-                            style={{ border: "2px solid green" }}
-                        >
-                            {testString}
-                        </div>
-                    </div>
 
 
                     <Route path="/user"  >
@@ -85,7 +44,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                             <br />
                             <br />
                             <br />
-                            <p className="paragraph"><h1>This is main user page</h1></p>
+                            <p className="paragraph"><h1>This is USER page</h1></p>
                             <br />
                             <hr />
                             <br />
@@ -93,12 +52,26 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                         </article>
                     </Route>
 
-                    <Route path="/maingrid"  >
+
+                    <Route path="/general"  >
                         <article style={{ width: "50vw", margin: "0 auto" }}>
                             <br />
                             <br />
                             <br />
-                            <p className="paragraph">  <h1>This is main grid for all api data</h1> </p>
+                            <p className="paragraph"><h1>This is page with GENERAL info</h1></p>
+                            <br />
+                            <hr />
+                            <br />
+                            <User className="main-content" />
+                        </article>
+                    </Route>
+
+                    <Route path="/updateperson"  >
+                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                            <br />
+                            <br />
+                            <br />
+                            <p className="paragraph">  <h1>Update section for P2 Level</h1> </p>
                             <br />
                             <hr />
                             <br />
@@ -116,7 +89,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                             <br />
                             <br />
                             <br />
-                            <p className="paragraph">  <h1>This is accordion grid </h1> </p>
+                            <p className="paragraph">  <h1>Get person Data grid've chosen from acoordion - P4 level </h1> </p>
                             <br />
                             <hr />
                             <br />
@@ -133,7 +106,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                             <br />
                             <br />
                             <br />
-                            <p className="paragraph">  <h1>Remove section for P3</h1> </p>
+                            <p className="paragraph">  <h1>Remove section for P3 Level</h1> </p>
                             <br />
                             <hr />
                             <br />
@@ -149,12 +122,71 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                             <br />
                             <br />
                             <br />
-                            <p className="paragraph">  <h1>Add Person p1</h1> </p>
+                            <p className="paragraph">  <h1>Add Person - P1 Level</h1> </p>
                             <br />
                             <hr />
                             <br />
 
                             <DrawerW3C />
+
+                        </article>
+                    </Route>
+
+
+                    <Route path="/test1"  >
+                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                            <br />
+                            <br />
+                            <br />
+                            <p className="paragraph">  <h1>TEST 1  section</h1> </p>
+                            <br />
+                            <hr />
+                            <br />
+                            {/* <Admin /> */}
+                            {/* <Form /> */}
+
+                            <div className="test__cy-gherkin">
+                                <br />
+                                <hr />
+                                <br />
+                    /**
+                    * input for the test reasons only
+                    */
+
+                    <br />
+                                <hr />
+                                <br />
+                                <input className="input__test" type="text" />
+
+                                <br />
+                                <hr />
+                                <br />
+
+                        /**
+                        * button for the test reasons only
+                        */
+                    <br />
+                                <hr />
+                                <br />
+
+                                <button className="button__test" >Test button</button>
+
+                                <br />
+                                <hr />
+                                <br />
+                    /**
+                    * div content box for the test reasons only
+                    */
+                     <br />
+                                <hr />
+                                <br />
+
+                                <div className="content-box"
+                                    style={{ border: "2px solid green" }}
+                                >
+                                    {testString}
+                                </div>
+                            </div>
 
                         </article>
                     </Route>
@@ -183,7 +215,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                             <Link to="/user" className="link-user">User</Link>
                         </li>
                         <li>
-                            <Link to="/maingrid" className="link-admin">Main Grid</Link>
+                            <Link to="/general" className="link-admin">general</Link>
                         </li>
                     </ul>
 
@@ -191,8 +223,8 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                         <Route exact path="/user" >
                             <Redirect to="/user" />
                         </Route>
-                        <Route exact path="/maingrid" >
-                            <Redirect to="/maingrid" />
+                        <Route exact path="/general" >
+                            <Redirect to="/general" />
                         </Route>
                     </Switch>
                     {/* </div> */}
@@ -214,3 +246,4 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
 }
 
 export default Grid4
+
