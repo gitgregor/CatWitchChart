@@ -134,7 +134,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                     </Route>
 
                     <Route path="/orgchart"  >
-                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                        <article style={{ width: "50vw", margin: "0 auto" }} className="test__cy-gherkin">
                             <br />
                             <br />
                             <br />
