@@ -14,6 +14,7 @@ import Accordion_copy_v1 from '../../Components/Accordion/Accordion_copy_v1'
 import MenuVertical from '../../Components/Menu/MenuVertical'
 import Loader from '../../Components/Loader/Loder'
 import DrawerW3C from '../../Components/Drawer/DrawerW3C'
+import OrgChart from '../../Components/OrgChart/OrgChart'
 
 
 import '../../STYLES/Styles/scssStyles/grid4.scss'
@@ -132,6 +133,24 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                         </article>
                     </Route>
 
+                    <Route path="/orgchart"  >
+                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                            <br />
+                            <br />
+                            <br />
+                            <p className="paragraph">  <h1> Organizational Chart</h1> </p>
+                            <br />
+                            <hr />
+                            <br />
+                            <OrgChart />
+                        </article>
+                    </Route>
+
+
+
+
+
+
 
                     <Route path="/test1"  >
                         <article style={{ width: "50vw", margin: "0 auto" }}>
@@ -203,16 +222,19 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                         <li>
                             <Link to="/general" className="link-admin">general</Link>
                         </li>
+                        <li>
+                            <Link to="/orgchart" className="link-admin">Organisational Chart</Link>
+                        </li>
                     </ul>
 
                     <Switch>
                         <Route exact path="/user" >
                             <Redirect to="/user" />
                         </Route>
-                        <Route exact path="/general" >
-                            <Redirect to="/general" />
-                        </Route>
                     </Switch>
+                    <Route exact path="/orgchart" >
+                        <Redirect to="/orgchart" />
+                    </Route>
                     {/* </div> */}
                     <MenuVertical />
                 </div>
