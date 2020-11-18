@@ -32,24 +32,38 @@ const data = [
 
 const StyledTreeExample = () => {
 
-    // const { L0, L11, L12, L13, L21, L22, L23, L24, L25, L26 } = data
+    const Level0 = data[0]
+    const { L0 } = Level0
+
+    console.log(Object.values(data[0]).join())
+    console.log(Object.values(data).includes({ L0: "warszawa" }))
+    console.log(Object.keys(data).includes("0"))  // true
+    console.log(Object.values(data))
+    console.log(Object.keys(data))
+    // console.log(Object.keys(data[2]).join()[1])
 
 
+    const arr = Object.keys(data).find(d => d === "0")
+
+
+    console.log(arr)
+    console.log(L0)
     return (
         <>
             <Tree
                 lineWidth={"2px"}
                 lineColor={"green"}
                 lineBorderRadius={"10px"}
-                label={<StyledNode>{"Warszawa"}</StyledNode>}>
+                label={<StyledNode>{L0}</StyledNode>}>
                 {
                     data.map(
                         dt => <TreeNode label={<StyledNode>{Object.values(dt)}</StyledNode>}>
                             {
-                                data.map(
+                                Object.keys(data[2]).join()[1] === "2" ? data.map(
                                     dt => <TreeNode label={<StyledNode>{Object.values(dt)}</StyledNode>}>
                                     </TreeNode>
                                 )
+                                    : null
                             }
                         </TreeNode>
                     )
