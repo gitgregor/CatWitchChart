@@ -15,6 +15,7 @@ import MenuVertical from '../../Components/Menu/MenuVertical'
 import Loader from '../../Components/Loader/Loder'
 import DrawerW3C from '../../Components/Drawer/DrawerW3C'
 import OrgChart from '../../Components/OrgChart/OrgChart'
+import OrgChart1 from '../../Components/OrgChart/OrgChart1'
 
 
 import '../../STYLES/Styles/scssStyles/grid4.scss'
@@ -142,7 +143,8 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                             <br />
                             <hr />
                             <br />
-                            <OrgChart />
+                            {/* <OrgChart /> */}
+                            <OrgChart1 />
                         </article>
                     </Route>
 
@@ -242,7 +244,7 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                 {/* <div className="five"> */}
                 <div className="item">
                     {/* <div className="subitem"> */}
-                    <Accordion_copy_v1 />
+                    {/* <Accordion_copy_v1 /> */}
                     {/* </div> */}
                     {/* <Loader /> */}
                 </div>
