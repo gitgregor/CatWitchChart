@@ -4,7 +4,7 @@ import "./menuVertical.scss";
 
 const list = [
   { name: "TEST", path: "/test1", exact: true },
-  { name: "Equipment", path: "/Equipment" },
+  { name: "dynamic jsx", path: "/dynamicjsx" },
   { name: "Dashboard", path: "/Dashboard" },
   { name: "Register", path: "/Register" },
   { name: "Events", path: "/Events" },

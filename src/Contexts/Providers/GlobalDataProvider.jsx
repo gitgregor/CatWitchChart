@@ -74,8 +74,8 @@ const GlobalDataProvider = ({ children }) => {
                                     // setData(dt)
                                 })
                         )
-                        console.log("promise FOR FETCH is done")
-                        console.log(datex)
+                        // console.log("promise FOR FETCH is done")
+                        // console.log(datex)
                     }, 100)
                 })
 
