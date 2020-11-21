@@ -24,27 +24,28 @@ color: white;
 
 
 const data = {
+    MainRoot: "Warszawa",
     content: {
         body: [
             {
-                _uid: "child 1",
-                child_1: "a",
-                child_2: "b"
+                _uid: "Wrocław",
+                child_1: "Pszczyna",
+                child_2: "Poznań"
             },
             {
-                _uid: "child 2",
-                child_1: "c",
-                child_2: "d"
+                _uid: "Gdańsk",
+                child_1: "Elbląg",
+                child_2: "Pruszcz"
             },
             {
-                _uid: "child 3",
-                child_1: "e",
-                child_2: "f"
+                _uid: "Kraków",
+                child_1: "Katowice",
+                child_2: "Lublin"
             },
             {
-                _uid: "child 4",
-                child_1: "g",
-                child_2: "h"
+                _uid: "Olsztyn",
+                child_1: "Szczytno",
+                child_2: "Mrągowo"
             }
         ]
     }
@@ -60,7 +61,7 @@ function DynamicJsx() {
                             lineWidth={"2px"}
                             lineColor={"green"}
                             lineBorderRadius={"10px"}
-                            label={<StyledNode>Warszawa</StyledNode>}>
+                            label={<StyledNode>{data.MainRoot}</StyledNode>}>
                             {
                                 data.content.body.map(uid =>
                                     <TreeNode label={<StyledNode>{uid._uid}</StyledNode>}>
