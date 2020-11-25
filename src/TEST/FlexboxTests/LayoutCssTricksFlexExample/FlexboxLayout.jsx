@@ -18,19 +18,22 @@ const FlexboxLayout = () => {
             <article class="mainer">
                 <p>Bla bla bla</p>
                 <Route exact path="/" component={Home} />
-                <Route path="/about" component={News} />
+                <Route path="/news" component={News} />
                 <Route path="/contact" component={Kontakt} />
             </article>
             <aside class="asidex aside-1x">Aside 1
                 <nav>
                 <ul>
                     <li><Link to="/">home</Link></li>
-                    <li><Link to="/about">News</Link></li>
+                    <li><Link to="/news">News</Link></li>
                     <li><Link to="/contact">Kontakt</Link></li>
                 </ul>
             </nav></aside>
             <aside class="asidex aside-2x">Aside 2</aside>
-            <footer class="footerex">Footer</footer>
+            <footer class="footerex">
+                Footer
+                <Route path="/contact" component={Kontakt} />
+            </footer>
         </div>
         </Router>
      
