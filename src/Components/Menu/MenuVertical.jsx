@@ -3,11 +3,12 @@ import { NavLink } from "react-router-dom";
 import "./menuVertical.scss";
 
 const list = [
-  { name: "TEST", path: "/test1", exact: true },
+  { name: "test", path: "/test1", exact: true },
   { name: "dynamic jsx", path: "/dynamicjsx" },
-  { name: "Dashboard", path: "/Dashboard" },
-  { name: "Register", path: "/Register" },
-  { name: "Events", path: "/Events" },
+  { name: "layouts", path: "/layouts" },
+  { name: "dashboard", path: "/dashboard" },
+  { name: "register", path: "/register" },
+  { name: "events", path: "/events" },
 ];
 
 const Navigation = () => {

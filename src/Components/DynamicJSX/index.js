@@ -53,42 +53,30 @@ const data = {
 
 function DynamicJsx() {
     return (
-        <div className="App">
+        <Tree
+            lineWidth={"2px"}
+            lineColor={"green"}
+            lineBorderRadius={"10px"}
+            label={<StyledNode>{data.MainRoot}</StyledNode>}>
             {
-                React.createElement(
-                    () =>
-                        <Tree
-                            lineWidth={"2px"}
-                            lineColor={"green"}
-                            lineBorderRadius={"10px"}
-                            label={<StyledNode>{data.MainRoot}</StyledNode>}>
-                            {
-                                data.content.body.map(uid =>
-                                    <TreeNode label={<StyledNode>{uid._uid}</StyledNode>}>
-                                        <TreeNode label={<StyledNode>{uid.child_1}</StyledNode>}></TreeNode>
-                                        <TreeNode label={<StyledNode>{uid.child_2}</StyledNode>}></TreeNode>
-                                    </TreeNode>
-                                )
-
-                            }
-                        </Tree>
-
-
-                    // () => <div>The component {block.component} has not been created yet.</div>,
-                    // { key: block._uid }
-
-
-
+                data.content.body.map(uid =>
+                    <TreeNode label={<StyledNode>{uid._uid}</StyledNode>}>
+                        <TreeNode label={<StyledNode>{uid.child_1}</StyledNode>}></TreeNode>
+                        <TreeNode label={<StyledNode>{uid.child_2}</StyledNode>}></TreeNode>
+                    </TreeNode>
                 )
             }
-
-            {/* <h1>Hello React</h1>
-            {data.content.body.map(block => Components(block))} */}
-        </div>
+        </Tree>
     );
 }
 
 export default DynamicJsx
+
+
+{/* <h1>Hello React</h1>
+            {data.content.body.map(block => Components(block))} */}
+
+
 
 //===============================================
 

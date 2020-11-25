@@ -1,0 +1,83 @@
+ html {
+     font-family: sans-serif;
+ }
+
+ body {
+     margin: 0;
+ }
+
+ header {
+     background: purple;
+     height: 100px;
+ }
+
+ h1 {
+     text-align: center;
+     color: white;
+     line-height: 100px;
+     margin: 0;
+ }
+
+
+
+ /* Add your flexbox CSS below here */
+
+ section {
+     display: flex;
+
+
+     article {
+         flex: 1 200px;
+         padding: 10px;
+         margin: 10px;
+         background: aqua;
+     }
+
+     .thrd-article:nth-of-type(3) {
+         flex: 2 300px;
+     }
+
+
+     //  section {
+     //      display: flex;
+
+
+     //      article {
+     //          flex: 1 200px;
+     //          padding: 10px;
+     //          margin: 10px;
+     //          background: aqua;
+     //      }
+
+     //      article:nth-of-type(3) {
+     //          flex: 2 400px;
+     //      }
+
+     //  section {
+     //      display: flex;
+
+
+     //      article {
+     //          flex: 1;
+     //          padding: 10px;
+     //          margin: 10px;
+     //          background: aqua;
+     //      }
+
+     //      article:nth-of-type(3) {
+     //          flex: 2
+     //      }
+
+ }
+
+ //  flex is a shorthand property that can specify up to three different values: 
+ //  The unitless proportion value. 
+
+ //  - This can be specified individually using the flex-grow longhand property. 
+
+ //  - A second unitless proportion value — flex-shrink — that
+ //   comes into play when the flex items are overflowing their container.
+ //   This specifies how much of the overflowing amount is taken away from each flex item's size, 
+ //   to stop them overflowing their container.
+
+ // - The minimum size. This can be specified individually using the flex-basis longhand value.

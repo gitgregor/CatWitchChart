@@ -17,6 +17,7 @@ import DrawerW3C from '../../Components/Drawer/DrawerW3C'
 import OrgChart from '../../Components/OrgChart/OrgChart'
 import OrgChart1 from '../../Components/OrgChart/OrgChart1'
 import DynamicJsx from '../../Components/DynamicJSX/index'
+import MainLayout from '../../pages/Menago/Menago'
 
 
 import '../../STYLES/Styles/scssStyles/grid4.scss'
@@ -209,6 +210,20 @@ const Grid4 = ({ changeColorToggler, DarkModeClickHandler, HideSlideClick, Slide
                             <hr />
                             <br />
                             <DynamicJsx />
+
+                        </article>
+                    </Route>
+
+                    <Route path="/layouts"  >
+                        <article style={{ width: "50vw", margin: "0 auto" }}>
+                            <br />
+                            <br />
+                            <br />
+                            <p className="paragraph">  <h1>Main Layout view</h1> </p>
+                            <br />
+                            <hr />
+                            <br />
+                            <MainLayout />
 
                         </article>
                     </Route>
